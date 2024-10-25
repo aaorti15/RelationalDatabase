@@ -1,0 +1,130 @@
+CREATE TABLE succeeded.
+No Errors.
+CREATE TABLE succeeded.
+No Errors.
+CREATE TABLE succeeded.
+No Errors.
+DESC userinfo
+Name                           Null     Type                                                                                                                                                                                          
+------------------------------ -------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+userID                         NOT NULL INTEGER                                                                                                                                                                                  
+fName                          NOT NULL VARCHAR(50)                                                                                                                                                                                        
+lName                          NOT NULL VARCHAR(50)
+
+DESC musicArtist
+Name                           Null     Type                                                                                                                                                                                          
+------------------------------ -------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+userID                         NOT NULL INTEGER                                                                                                                                                                                  
+fName                          NOT NULL VARCHAR(60)                                                                                                                                                                                        
+lName                          NOT NULL VARCHAR(60)
+
+DESC music
+Name                           Null     Type                                                                                                                                                                                          
+------------------------------ -------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+musicID                        NOT NULL INTEGER                                                                                                                                                                                  
+userID                       	        INTEGER                                                                                                                                                                                        
+artistID                                INTEGER
+Album                          	        VARCHAR(50)                                                                                                                                                                                        
+songTitle                               VARCHAR(50)
+musicYear                          	INTEGER                                                                                                                                                                                       
+musicLocation                           VARCHAR(60)
+
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+1 rows inserted
+userID               fName                  lName                            
+-------------------- ---------------------- --------------------
+1                    John                   Smith                                 
+2                    Bridgette              Smith                                  
+3                    Michael                Angelo                                   
+4                    Cole                   Brown                                 
+5                    Jacob                  Harris                                                                    
+5 rows selected
+
+artistID             fName                  lName                            
+-------------------- ---------------------- --------------------
+1                    Ke                     Shi
+2                    Origami                Angel
+3                    Tim                    Cooks
+4                    Klay                   Thompson
+5                    Justin                 Bieber
+5 rows selected
+
+musicID              userID                 artistID             Album                songTitle            musicYear            musicLocation
+-------------------- ---------------------- -------------------- -------------------- -------------------- -------------------- --------------------
+1		     3                      2                    Somewhere City       Title Track          2017                 Los Angeles                                                  
+2		     1                      1                    limbo                smth                 2015                 Los Angeles                                  
+3		     4                      3                    under                always               2022                 Phoenix                                    
+4                    3                      1                    like i need          bandaids             2012                 Tuscon                                              
+5                    1                      1                    Reaper               skeleton             2021                 Miami                                         
+6                    2                      5                    beside               you                  2013                 Albany                                     
+7                    5                      4                    drunk                dog                  2012                 Seattle                                   
+8                    2                      4                    less of              gabriel              2011                 Dallas                                            
+9                    3                      2                    more                 more                 2018                 Fortworth                                 
+9 rows selected
+
+userID               musicID                songTitle            Album                lName                fName
+-------------------- ---------------------- -------------------- -------------------- -------------------- --------------------
+1		     2                      smth                 limbo                Smith                John                                                       
+1		     5                      skeleton             REAPER               Smith                John                                                 
+2		     6                      you                  beside               Smith                Bridgette                                                       
+2                    8                      gabriel              less of              Smith                Bridgette                                                              
+3                    1                      Title Track          Somewhere City       Angelo               Michael                                                                          
+3                    4                      bandaids             like i need          Angelo               Michael                                                                     
+3                    9                      more                 more                 Angelo               Michael                                                      
+4                    3                      always               under                Brown                Cole                                                              
+5                    7                      dog                  drunk                Harris               Jacob 
+9 rows selected
+
+artistID             musicID                Album                songTitle            musicYear            musicLocation
+-------------------- ---------------------- -------------------- -------------------- -------------------- --------------------
+1		     2                      limbo                smth                 2015                 Los Angeles                                                      
+1		     4                      like i need          bandaids             2012                 Tuscon                                                                
+1		     5                      REAPER               skeleton             2021                 Miami                                                           
+2                    1                      Somewhere City       Title Track          2017                 Los Angeles                                                                        
+2                    9                      more                 more                 2018                 Fortworth                                                       
+3                    3                      under                always               2022                 Phoenix                                                           
+4                    7                      drunk                dog                  2012                 Seattle                                                       
+4                    8                      less of              gabriel              2011                 Dallas                                                                
+5                    6                      beside               you                  2013                 Albany   
+9 rows selected                                   
+
+artistID             musicID                Album                songTitle            musicYear            musicLocation
+-------------------- ---------------------- -------------------- -------------------- -------------------- --------------------
+1		     2                      limbo                smth                 2015                 Los Angeles                                                      
+1		     4                      like i need          bandaids             2012                 Tuscon                                                                
+1		     5                      REAPER               skeleton             2021                 Miami                                                           
+3 rows selected
+
+artistID             fName                  lName             
+-------------------- ---------------------- -------------------- 
+1		     Ke                     Shi                                                                                                         
+2		     Origami                Angel                                                                                                              
+4		     Klay                   Thompson                                                                                                           
+3 rows selected 
+
+userID               fName                  lName            
+-------------------- ---------------------- --------------------
+1		     Bridgette              Smith                                                                                                                
+2		     Michael                Angelo                                                                                                              
+2 rows selected
+
+ DROP TABLE music succeeded.
+ DROP TABLE userinfo succeeded.
+ DROP TABLE musicArtist succeeded.
